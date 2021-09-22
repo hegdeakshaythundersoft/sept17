@@ -62,22 +62,26 @@ void display(){
 }
 void rev(){
 
-	node *temp1=first,*temp2=temp1->next;
+	node *temp=first,*buff=first->next,*puff;
+	printf("%d\t%d\n",tempf->member,temps->next->member);
 	while(temp!=NULL){
-	temp1->next=temp2->next;//first->next=third
-	temp2->next=temp1;//second->next=first
+		puff=buff->next;
+		buff->next=temp;
+		temp=puff;
 	
-	
-	
-	
-	
+	}
+
+	temp=last;
+	last=first;
+	first=temp;
+
 	}
 	
 
 
 
 
-}
+
 int main(){
 	//node **ptr=first;
     create();
